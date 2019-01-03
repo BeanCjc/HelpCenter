@@ -1,0 +1,103 @@
+{
+    "list": [{
+        "date": "2018-10-10 08:00:00",
+        "name": "林丽",
+        "tel":"13453533987",
+        "account":"888822",
+        "userstate":"启用",
+        "role":"超级管理员",
+        "address": "吉林省 辽源市 龙山区",
+        "modifyname":"admin",
+        "modifytime":"2018-10-10 08:00:00"
+    }, {
+        "date": "2018-10-10 08:00:00",
+        "name": "文敏",
+        "tel":"13453533987",
+        "account":"888822",
+        "userstate":"禁用",
+        "role":"财务人员",
+        "address": "江西省 萍乡市 芦溪县",
+        "modifyname":"admin",
+        "modifytime":"2018-10-10 08:00:00"
+    }, {
+        "date": "2018-10-10 08:00:00",
+        "name": "杨秀兰",
+        "tel":"13453533987",
+        "account":"888822",
+        "userstate":"启用",
+        "role":"财务",
+        "address": "黑龙江省 黑河市 五大连池市",
+        "modifyname":"admin",
+        "modifytime":"2018-10-10 08:00:00"
+    }, {
+        "date": "2018-10-10 08:00:00",
+        "name": "魏强",
+        "tel":"13453533987",
+        "account":"888822",
+        "userstate":"启用",
+        "role":"财务",
+        "address": "广东省 韶关市 始兴县",
+        "modifyname":"admin",
+        "modifytime":"2018-10-10 08:00:00"
+    }, {
+        "date": "2018-10-10 08:00:00",
+        "name": "石秀兰",
+        "tel":"13453533987",
+        "account":"888822",
+        "userstate":"启用",
+        "role":"研发",
+        "address": "江苏省 宿迁市 宿豫区",
+        "modifyname":"admin",
+        "modifytime":"2018-10-10 08:00:00"
+    }, {
+        "date": "2018-10-10 08:00:00",
+        "name": "朱洋",
+        "tel":"13453533987",
+        "account":"888822",
+        "userstate":"启用",
+        "role":"研发",
+        "address": "海外 海外 -",
+        "modifyname":"admin",
+        "modifytime":"2018-10-10 08:00:00"
+    }, {
+        "date": "2018-10-10 08:00:00",
+        "name": "傅敏",
+        "tel":"13453533987",
+        "account":"888822",
+        "userstate":"启用",
+        "role":"客服",
+        "address": "海外 海外 -",
+        "modifyname":"admin",
+        "modifytime":"2018-10-10 08:00:00"
+    }, {
+        "date": "2018-10-10 08:00:00",
+        "name": "毛明",
+        "tel":"13453533987",
+        "account":"888822",
+        "userstate":"启用",
+        "role":"客服",
+        "address": "内蒙古自治区 包头市 九原区",
+        "modifyname":"admin",
+        "modifytime":"2018-10-10 08:00:00"
+    }, {
+        "date": "2018-10-10 08:00:00",
+        "name": "何静",
+        "tel":"13453533987",
+        "account":"888822",
+        "userstate":"启用",
+        "role":"客服",
+        "address": "西藏自治区 阿里地区 普兰县",
+        "modifyname":"admin",
+        "modifytime":"2018-10-10 08:00:00"
+    }, {
+        "date": "2018-10-10 08:00:00",
+        "name": "郭秀英",
+        "tel":"13453533987",
+        "account":"888822",
+        "userstate":"启用",
+        "role":"客服",
+        "address": "四川省 巴中市 恩阳区",
+        "modifyname":"admin",
+        "modifytime":"2018-10-10 08:00:00"
+    }]
+}

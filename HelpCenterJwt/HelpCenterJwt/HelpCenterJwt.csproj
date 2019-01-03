@@ -1,0 +1,135 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591;</NoWarn>
+    <OutputPath>bin\Debug\netcoreapp2.1\</OutputPath>
+    <DocumentationFile>bin\Debug\netcoreapp2.1\HelpCenterApiDoc.xml</DocumentationFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\static\.gitkeep" />
+    <None Include="wwwroot\static\Iconfont\iconfont.svg" />
+    <None Include="wwwroot\static\js\0.0964783a963ac4a69ba4.js" />
+    <None Include="wwwroot\static\js\0.7bff39a1454ac7f038de.js" />
+    <None Include="wwwroot\static\js\0.c345459035a904281b0c.js" />
+    <None Include="wwwroot\static\js\0.fdf55d5262fb8f6b6144.js" />
+    <None Include="wwwroot\static\js\1.54df2225098a713a4b9f.js" />
+    <None Include="wwwroot\static\js\1.8c1eb0d72c6420cd75d7.js" />
+    <None Include="wwwroot\static\js\10.620e46d1d312565f6f47.js" />
+    <None Include="wwwroot\static\js\10.6363ae41b74e3b7fe7fd.js" />
+    <None Include="wwwroot\static\js\10.664d6a12e291f887b25b.js" />
+    <None Include="wwwroot\static\js\10.85df22684e5f0ae4e763.js" />
+    <None Include="wwwroot\static\js\11.011f14e703161cf5f813.js" />
+    <None Include="wwwroot\static\js\11.0b2095bc3ab2873e2e25.js" />
+    <None Include="wwwroot\static\js\11.8afebac0aac6619ab3ab.js" />
+    <None Include="wwwroot\static\js\11.f1980f8c64efe18cbba1.js" />
+    <None Include="wwwroot\static\js\12.e9f4b755ff601d9b863c.js" />
+    <None Include="wwwroot\static\js\12.ea0c7eb5f7d6d8835a0d.js" />
+    <None Include="wwwroot\static\js\12.f88b830dffa16d56dbe9.js" />
+    <None Include="wwwroot\static\js\13.0efa55792663da4dff9e.js" />
+    <None Include="wwwroot\static\js\13.632ff36ead4374c86277.js" />
+    <None Include="wwwroot\static\js\13.89cf0c196a9878e38467.js" />
+    <None Include="wwwroot\static\js\14.08df63f4a4ed74cd9ec6.js" />
+    <None Include="wwwroot\static\js\14.38e86a918b7ee54f8b44.js" />
+    <None Include="wwwroot\static\js\15.bf2d089112ae641f3f4a.js" />
+    <None Include="wwwroot\static\js\15.fcf838160f7b1389fa84.js" />
+    <None Include="wwwroot\static\js\16.8886cc2ac7b49bc57935.js" />
+    <None Include="wwwroot\static\js\16.b6d3f066874af08d5ef2.js" />
+    <None Include="wwwroot\static\js\16.c53e9796e89dc7989723.js" />
+    <None Include="wwwroot\static\js\16.e4842ff999c639773bb2.js" />
+    <None Include="wwwroot\static\js\17.4159038e9e28b653df4a.js" />
+    <None Include="wwwroot\static\js\17.591664cfb53fb9002294.js" />
+    <None Include="wwwroot\static\js\18.aa260d66f697d78ba9b0.js" />
+    <None Include="wwwroot\static\js\18.f51ab74ea6c46e6916db.js" />
+    <None Include="wwwroot\static\js\18.fff2b292bae80c5edb3d.js" />
+    <None Include="wwwroot\static\js\19.b144dba600f4a1ccdb9c.js" />
+    <None Include="wwwroot\static\js\2.3a5d360aaab685c5a266.js" />
+    <None Include="wwwroot\static\js\3.b69dc71609252dacda30.js" />
+    <None Include="wwwroot\static\js\3.cd3948e87d5f22c81baa.js" />
+    <None Include="wwwroot\static\js\3.e38c64339ca1cb3533f6.js" />
+    <None Include="wwwroot\static\js\4.76d5106bdc78681bddaa.js" />
+    <None Include="wwwroot\static\js\4.986ba0e642e09dbdabd7.js" />
+    <None Include="wwwroot\static\js\4.acf1ad8efe93e75d6858.js" />
+    <None Include="wwwroot\static\js\5.6aa73681e2f07d1fcbda.js" />
+    <None Include="wwwroot\static\js\5.90367190bafb53cd7d4d.js" />
+    <None Include="wwwroot\static\js\6.16a4064b7a4f6a61bfd6.js" />
+    <None Include="wwwroot\static\js\6.6099063057b1362c1e21.js" />
+    <None Include="wwwroot\static\js\6.d9b0a72d60a9f2368258.js" />
+    <None Include="wwwroot\static\js\6.da930cf0a62c6ec164c5.js" />
+    <None Include="wwwroot\static\js\7.21c2480cbd4809b857a2.js" />
+    <None Include="wwwroot\static\js\7.87ff8bc3377aba54ac1b.js" />
+    <None Include="wwwroot\static\js\7.e692748adf14eddb5aa8.js" />
+    <None Include="wwwroot\static\js\8.34010f13a11557b88d63.js" />
+    <None Include="wwwroot\static\js\8.63b5812f83de638d2a6d.js" />
+    <None Include="wwwroot\static\js\8.6d0f35ac63ccb64029e8.js" />
+    <None Include="wwwroot\static\js\8.d04f60b155394bfdd045.js" />
+    <None Include="wwwroot\static\js\9.35821024dddd8afcb5a6.js" />
+    <None Include="wwwroot\static\js\9.7fbcd69c65c362ecb76d.js" />
+    <None Include="wwwroot\static\js\9.92020f1284ea786827e1.js" />
+    <None Include="wwwroot\static\js\9.d9ace57f7027dc7424d6.js" />
+    <None Include="wwwroot\static\js\app.37914cadce9c4e973b1d.js" />
+    <None Include="wwwroot\static\js\app.662e9c6fd8532c1b9ff0.js" />
+    <None Include="wwwroot\static\js\app.813ed69b6b64f31a2479.js" />
+    <None Include="wwwroot\static\js\app.8d056a8d03984cc73d2a.js" />
+    <None Include="wwwroot\static\js\app.8e86bd02a192e451c667.js" />
+    <None Include="wwwroot\static\js\app.9bd5bb02aacbdd57f2b1.js" />
+    <None Include="wwwroot\static\js\app.a4df7b6aa14b6efc1631.js" />
+    <None Include="wwwroot\static\js\manifest.161629352eb618a097e9.js" />
+    <None Include="wwwroot\static\js\manifest.181a39f4337b8b3ef0c2.js" />
+    <None Include="wwwroot\static\js\manifest.407c186a181c7416c7fe.js" />
+    <None Include="wwwroot\static\js\manifest.44f0e4784f114b658b02.js" />
+    <None Include="wwwroot\static\js\manifest.a188f69ad5dc6e3916f5.js" />
+    <None Include="wwwroot\static\js\manifest.b568ce9c658e0fa03d24.js" />
+    <None Include="wwwroot\static\js\manifest.bc516064b56a781f102e.js" />
+    <None Include="wwwroot\static\js\manifest.c740b6003653106f306b.js" />
+    <None Include="wwwroot\static\js\manifest.eaad9fab32d6037bc813.js" />
+    <None Include="wwwroot\static\js\vendor.0fa729593a43373f5724.js" />
+    <None Include="wwwroot\static\js\vendor.54bd13ea5a128e44ac4b.js" />
+    <None Include="wwwroot\static\js\vendor.7c8ba84001acac9bed09.js" />
+    <None Include="wwwroot\static\js\vendor.8c20c6e152f807859f8f.js" />
+    <None Include="wwwroot\static\js\vendor.d9f00c0b12d2b78f1d63.js" />
+    <None Include="wwwroot\static\js\vendor.dll.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HelpCenter.ActionService\HelpCenter.ActionService.csproj" />
+    <ProjectReference Include="..\HelpCenter.BLL\HelpCenter.BLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="HelpCenterApiDoc.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetDir)HelpCenterApiDoc.xml $(ProjectDir)HelpCenterApiDoc.xml" />
+  </Target>
+
+</Project>

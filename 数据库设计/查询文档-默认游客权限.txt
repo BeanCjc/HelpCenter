@@ -1,0 +1,23 @@
+
+create view doc_visitor as
+SELECT
+    doc.*, doctypeconfig.docTypeName
+FROM
+
+    (
+    SELECT
+        helpdoc.docid,
+        helpdoc.docTypeId,
+        helpdoc.docTitle,
+        helpdoc.docContent,
+        helpdoc.docFullText,
+        helpdoc.docNum,
+        helpdoc.docCount,
+        helpdoc.crdt ,
+        helpdoc.updt
+    FROM
+
+        (SELECT docid FROM docusrrole WHERE roleid = '4b5df8d4-e422-48b4-8138-7fd6806dd214') dur
+      INNER JOIN helpdoc ON dur.docid = helpdoc.docId and helpdoc.docState!=0
+	) doc
+    LEFT JOIN doctypeconfig ON doc.docTypeId = doctypeconfig.docTypeId

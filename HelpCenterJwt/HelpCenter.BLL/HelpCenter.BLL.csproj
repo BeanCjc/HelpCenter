@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HelpCenter.ActionService\HelpCenter.ActionService.csproj" />
+    <ProjectReference Include="..\HelpCenter.Model\HelpCenter.Model.csproj" />
+    <ProjectReference Include="..\HelpCenter.Repository\HelpCenter.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,33 @@
+{
+    "treeDate": [{
+        "label": "业务部",
+        "children": [{
+            "label": "智慧餐饮",
+            "children": [{
+                "label": "门店管理",
+                "children": [{
+                    "label": "设备管理"
+                    },
+                    {
+                        "label": "安卓设备管理"
+                    },
+                    {
+                        "label": "PC设备管理"
+                    }]
+            }]
+        }]
+    }, {
+        "label": "一级 2",
+        "children": [{
+            "label": "二级 2-1",
+            "children": [{
+                "label": "三级 2-1-1"
+            }]
+        }, {
+            "label": "二级 2-2",
+            "children": [{
+                "label": "三级 2-2-1"
+            }]
+        }]
+    }]
+}

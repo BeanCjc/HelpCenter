@@ -1,0 +1,736 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HelpCenterJwt</name>
+    </assembly>
+    <members>
+        <member name="M:HelpCenterJwt.Controllers.AuthController.Token(HelpCenterJwt.ViewModel.LoginViewModel)">
+            <summary>
+            请求登陆验证
+            </summary>
+            <param name="loginViewModel">登陆所需用户信息视图</param>
+            <returns></returns>
+        </member>
+        <member name="T:HelpCenterJwt.Controllers.Dept.DeptController">
+            <summary>
+            部门信息
+            </summary>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.GetTopList">
+            <summary>
+            获取顶级部门清单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.GetDeptListByPage(System.Int32,System.Int32)">
+            <summary>
+            获取所有部门清单（分页），提供指定页的数据、总数据量及总页数
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.GetDeptNameListByPage(System.Int32,System.Int32,System.String)">
+            <summary>
+            获取按部门名称搜索的清单（分页），提供指定页的数据、总数据量及总页数
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <param name="deptName">部门名称，支持模糊搜索</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.GetDeptListByUsrId">
+            <summary>
+            获取当前登录用户的所在部门，并提供当前部门下的子节点列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.GetDeptByDeptId(System.String)">
+            <summary>
+            根据部门ID获取部门详细信息，并提供当前部门下的子节点列表
+            </summary>
+            <param name="deptId">部门ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.GetUserListByDeptId(System.Int32,System.Int32,System.String)">
+            <summary>
+            列出指定部门下的用户清单（分页）
+            </summary>
+            <param name="pageIndex">指定页码</param>
+            <param name="rowCount">每页数据量</param>
+            <param name="deptId">部门ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.GetDocTypeListByDeptId(System.Int32,System.Int32,System.String)">
+            <summary>
+            根据部门ID获取所有文档类型清单（分页），提供指定页的数据、总数据量及总页数
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <param name="deptId">部门ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.Post(HelpCenterJwt.ViewModel.DeptViewModel)">
+            <summary>
+            新增部门信息
+            </summary>
+            <param name="createDeptViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.Put(System.String,System.String)">
+            <summary>
+            重置指定部门账号的密码
+            </summary>
+            <param name="deptId">指定部门ID</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.Put(System.String,HelpCenterJwt.ViewModel.DeptViewModel)">
+            <summary>
+            更新指定部门信息
+            </summary>
+            <param name="deptId">指定部门ID</param>
+            <param name="updateDeptViewModel"></param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Dept.DeptController.Delete(System.String)">
+            <summary>
+            删除指定的部门信息
+            </summary>
+            <param name="deptId">部门ID</param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocDeptRoleController.Post(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            更新指定的文档部门关系信息，每次提交最新的所有权限列表，留空为清空所有权限
+            </summary>
+            <param name="strDocId">文档ID</param>
+            <param name="deptIdList">共享部门ID列表</param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocDeptRoleController.GetDocDeptRoleModelList(System.String)">
+            <summary>
+            查询文档对应的部门共享关系
+            </summary>
+            <param name="docId">文档ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:HelpCenterJwt.Controllers.Doc.DocTypeConfigController">
+            <summary>
+            文档类型资料
+            </summary>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.GetTopList">
+            <summary>
+            获取顶级文档类型清单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.GetHomePageList">
+            <summary>
+            获取首页文档清单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.GetAllList">
+            <summary>
+            获取所有文档类型清单，以列表方式返回数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.GetAllListTree">
+            <summary>
+            获取所有文档类型清单,以树节点方式返回数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.Get(System.Int32,System.Int32)">
+            <summary>
+            获取所有文档类型清单（分页），提供指定页的数据、总数据量及总页数
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.Get(System.String)">
+            <summary>
+            根据ID获取文档类型详细信息，并提供当前文档类型下的子类型列表
+            </summary>
+            <param name="docTypeId">文档类型ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.GetListByDocTypeName(System.Int32,System.Int32,System.String)">
+            <summary>
+            获取所有文档类型清单（分页），提供指定页的数据、总数据量及总页数
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <param name="strDocTypeName">文档类型名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.GetListByDocTypeId(System.Int32,System.Int32,System.String)">
+            <summary>
+            根据文档分类ID获取所有文档类型清单（分页），提供指定页的数据、总数据量及总页数
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <param name="docTypeID">文档分类ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.Post(HelpCenterJwt.ViewModel.DocTypeViewModel)">
+            <summary>
+            新增文档类型信息
+            </summary>
+            <param name="docTypeViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.Put(System.String,HelpCenterJwt.ViewModel.DocTypeViewModel)">
+            <summary>
+            更新指定文档类型信息
+            </summary>
+            <param name="docTypeId">指定文档类型ID</param>
+            <param name="docTypeViewModel"></param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.DocTypeConfigController.Delete(System.String)">
+            <summary>
+            删除指定的文档类型信息
+            </summary>
+            <param name="docTypeId">文档类型ID</param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.HelpDocController.GetPageList(System.Int32,System.Int32,System.String)">
+            <summary>
+            获取所有文档清单（分页），提供指定页的数据、总数据量及总页数
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <param name="keyword">搜索关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.HelpDocController.Get(System.String)">
+            <summary>
+            根据文档ID获取文档详细信息
+            </summary>
+            <param name="helpDocId">文档ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.HelpDocController.GetListByDeptId(System.Int32,System.Int32,System.String)">
+            <summary>
+            根据部门ID获取文档列表
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <param name="deptId">部门ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.HelpDocController.GetListByDocTypeId(System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            根据文档类型ID获取文档列表
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <param name="docTypeId">文档类型ID</param>
+            <param name="isRecursion">是否递归获取文档</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.HelpDocController.Post(HelpCenterJwt.ViewModel.HelpDocViewModel)">
+            <summary>
+            新增文档信息
+            </summary>
+            <param name="helpDocViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.HelpDocController.Put(System.String,HelpCenterJwt.ViewModel.HelpDocViewModel)">
+            <summary>
+            更新指定文档信息
+            </summary>
+            <param name="helpDocId">指定文档ID</param>
+            <param name="helpDocViewModel"></param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Doc.HelpDocController.Delete(System.String)">
+            <summary>
+            删除指定的文档信息
+            </summary>
+            <param name="helpDocId">文档ID</param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.File.FileController.File(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            文件上传，如果上传失败，可以尝试将文件上传标签的name属性值更改为“fileinput”
+            </summary>
+            <param name="fileinput">选择文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.DocRoleController.Post(HelpCenterJwt.ViewModel.DocRoleViewModel)">
+            <summary>
+            更新指定的文档角色关系信息，每次提交最新的所有权限列表，留空为清空所有权限
+            </summary>
+            <param name="docRoleViewModel">文档角色对应关系视图</param>
+        </member>
+        <member name="T:HelpCenterJwt.Controllers.Role.RoleController">
+            <summary>
+            角色资料
+            </summary>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.RoleController.Get(System.Int32,System.Int32)">
+            <summary>
+            获取所有角色清单（分页），提供指定页的数据、总数据量及总页数
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.RoleController.GetAllList(System.Boolean)">
+            <summary>
+            获取所有角色清单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.RoleController.Get(System.String)">
+            <summary>
+            根据ID获取角色详细信息
+            </summary>
+            <param name="roleId">角色ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.RoleController.Post(HelpCenterJwt.ViewModel.RoleViewModel)">
+            <summary>
+            新增角色信息
+            </summary>
+            <param name="roleViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.RoleController.Put(System.String,HelpCenterJwt.ViewModel.RoleViewModel)">
+            <summary>
+            更新指定角色信息
+            </summary>
+            <param name="roleId">指定角色ID</param>
+            <param name="roleViewModel"></param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.RoleController.Delete(System.String)">
+            <summary>
+            删除指定的角色信息
+            </summary>
+            <param name="roleId">角色ID</param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.RoleController.Enable(System.String,System.Int32)">
+            <summary>
+            禁用/启用指定的角色信息
+            </summary>
+            <param name="roleId">角色ID</param>
+            <param name="roleState">启用状态1为启用，0为禁用</param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.RoleSysModuleController.Post(System.String,HelpCenterJwt.ViewModel.RoleSysModuleViewModel)">
+            <summary>
+            更新指定的系统模块角色关系信息，每次提交最新的所有权限列表，留空为清空所有权限
+            </summary>
+            <param name="roleId">角色ID</param>
+            <param name="roleSysModuleViewModel">系统模块角色对应关系视图</param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.RoleSysModuleController.GetModelListByRoleId(System.String)">
+            <summary>
+            获取指定的角色ID与系统模块关系
+            </summary>
+            <param name="roleId">角色ID</param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.RoleSysModuleController.GetModelListByUserId(System.String)">
+            <summary>
+            获取指定用户ID与系统模块关系，留空为获取当前用户ID
+            </summary>
+            <param name="userId">用户ID</param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.UserRoleController.GetUserRoleListByPage(System.Int32,System.Int32)">
+            <summary>
+            获取所有用户角色关系清单（分页），提供指定页的数据、总数据量及总页数
+            </summary>
+            <param name="pageIndex">页码，从1开始</param>
+            <param name="rowCount">每页数据量</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.UserRoleController.Get(System.String)">
+            <summary>
+            根据用户ID获取用户角色关系详细信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.UserRoleController.Post(HelpCenterJwt.ViewModel.UserRoleViewModel)">
+            <summary>
+            更改用户角色关系信息
+            </summary>
+            <param name="userRoleViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.Role.UserRoleController.Delete(System.String)">
+            <summary>
+            删除指定的用户角色关系信息
+            </summary>
+            <param name="userId">用户角色关系ID</param>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.SysModule.SysModuleController.Get">
+            <summary>
+            获取顶级系统模块清单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.SysModule.SysModuleController.GetTreeMode">
+            <summary>
+            获取树形系统模块清单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.SysModule.SysModuleController.Get(System.Int32,System.Int32)">
+            <summary>
+            获取所有系统模块信息
+            </summary>
+            <param name="pageIndex">指定页码</param>
+            <param name="rowCount">每页数据量</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.SysModule.SysModuleController.Get(System.String)">
+            <summary>
+            获取指定ID系统模块信息，并返回该模块下的子模块列表
+            </summary>
+            <param name="ModuleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.SysModule.SysModuleController.Post(HelpCenterJwt.ViewModel.SysModuleViewModel)">
+            <summary>
+            新增系统模块信息
+            </summary>
+            <param name="sysModuleViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.SysModule.SysModuleController.Put(System.String,HelpCenterJwt.ViewModel.SysModuleViewModel)">
+            <summary>
+            修改指定ID系统模块信息
+            </summary>
+            <param name="ModuleId"></param>
+            <param name="sysModuleViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.SysModule.SysModuleController.Delete(System.String)">
+            <summary>
+            删除指定的系统模块记录 
+            </summary>
+            <param name="ModuleId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HelpCenterJwt.Controllers.User.UserController">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.Get(System.Int32,System.Int32,System.String)">
+            <summary>
+            获取所有用户信息
+            </summary>
+            <param name="pageIndex">指定页码</param>
+            <param name="rowCount">每页数据量</param>
+            <param name="usrType">用户类型，默认1为部门账号，2为正式人员，3为试用人员，4为普通用户，留空默认为4，查询多种用户以英文逗号隔开,如“2,3”</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.GetListByUsrName(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            根据用户名搜索，获取用户清单（分页）
+            </summary>
+            <param name="pageIndex">指定页码</param>
+            <param name="rowCount">每页数据量</param>
+            <param name="userName">用户名，支持模糊搜索</param>
+            <param name="usrType">用户类型，默认1为部门账号，2为正式人员，3为试用人员，4为普通用户，查询多种用户以英文逗号隔开,如“2,3”</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.Get(System.String)">
+            <summary>
+            获取指定ID用户信息，若UsrId为空，返回当前登录用户信息
+            </summary>
+            <param name="UsrId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.GetUsrAccount(System.String)">
+            <summary>
+            检查账号信息是否已经注册
+            </summary>
+            <param name="UsrAccount">注册账号</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.Post(HelpCenterJwt.ViewModel.UserViewModel)">
+            <summary>
+            新增用户信息
+            </summary>
+            <param name="userViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.Put(System.String,HelpCenterJwt.ViewModel.UserViewModel)">
+            <summary>
+            修改指定ID用户信息
+            </summary>
+            <param name="UsrId"></param>
+            <param name="userViewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.Put(System.String,System.String)">
+            <summary>
+            重置指定用户密码
+            </summary>
+            <param name="UsrAccount">指定用户账号</param>
+            <param name="Password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.PutPassword(System.String)">
+            <summary>
+            重置当前登录用户密码
+            </summary>
+            <param name="Password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.UpdateUsrVerifyState(System.String,System.Int32)">
+            <summary>
+            审核用户状态
+            </summary>
+            <param name="UsrId">指定用户ID</param>
+            <param name="UsrVerifyState">用户审核状态1为通过，0为未通过</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.UpdateUserState(System.String,System.Int32)">
+            <summary>
+            启用/禁用用户状态
+            </summary>
+            <param name="UsrId">指定用户ID</param>
+            <param name="UsrState">用户启用状态1为通过，0为未通过</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelpCenterJwt.Controllers.User.UserController.Delete(System.String)">
+             <summary>
+            删除指定的用户记录
+             </summary>
+             <param name="UsrId"></param>
+             <returns></returns>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.DeptViewModel.PreDeptId">
+            <summary>
+            上级部门编号
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.DeptViewModel.DeptName">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.DeptViewModel.DeptAccount">
+            <summary>
+            部门账号
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.DeptViewModel.DeptPsw">
+            <summary>
+            部门密码
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.DeptViewModel.DeptNO">
+            <summary>
+            部门编码
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.DocRoleViewModel.RoleId">
+            <summary>
+            文档ID
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.DocRoleViewModel.DocIdList">
+            <summary>
+            允许该角色查看的文档列表
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.DocTypeViewModel.DocTypeNum">
+            <summary>
+            文档类型排序号
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.DocTypeViewModel.DocPreTypeId">
+            <summary>
+            上级分类ID
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.DocTypeViewModel.DocTypeName">
+            <summary>
+            文档类型名称
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.DocTypeViewModel.DocTypeDeptId">
+            <summary>
+            上级部门ID
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.DocNum">
+            <summary>
+            文档排序号码
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.DocTypeId">
+            <summary>
+            文档分类ID
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.DocTitle">
+            <summary>
+            文档标题
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.DocContent">
+            <summary>
+            文档内容（包含html标签）
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.DocFullText">
+            <summary>
+            文档纯文字内容（去除html标签）
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.DocDeptId">
+            <summary>
+            文档所属部门
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.DocShareDeptList">
+            <summary>
+            共享部门ID列表
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.DocAttachment">
+            <summary>
+            附件路径
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.IsDefaultRole">
+            <summary>
+            是否默认可见（游客权限）
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.viewRoleList">
+            <summary>
+            允许查看的角色列表
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.HelpDocViewModel.editRoleList">
+            <summary>
+            允许编辑的角色列表
+            </summary>
+        </member>
+        <member name="T:HelpCenterJwt.ViewModel.RoleSysModuleViewModel">
+            <summary>
+            角色与系统模块关系视图模型
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.RoleSysModuleViewModel.SysModuleIdList">
+            <summary>
+            角色对应的系统模块ID列表
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.RoleSysModuleViewModel.RoleSysModuleState">
+            <summary>
+            关系状态，1为启用，0为停用
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.RoleViewModel.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.RoleViewModel.RoleRemark">
+            <summary>
+            角色说明
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.RoleViewModel.RoleState">
+            <summary>
+            启用状态，1为启用，0为停用
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.SysModuleViewModel.ModuleName">
+            <summary>
+            系统模块名称
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.SysModuleViewModel.ModuleCode">
+            <summary>
+            模块编码
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.SysModuleViewModel.ModuleImgPath">
+            <summary>
+            模块图标路径
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.SysModuleViewModel.ModuleUrlPath">
+            <summary>
+            模块跳转路径
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.SysModuleViewModel.PreModuleId">
+            <summary>
+            上级模块ID
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.SysModuleViewModel.ModuleRemark">
+            <summary>
+            模块说明
+            </summary>
+        </member>
+        <member name="F:HelpCenterJwt.ViewModel.SysModuleViewModel.ModuleState">
+            <summary>
+            模块状态，1为启用，0为停用
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserRoleViewModel.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserRoleViewModel.RoleIdList">
+            <summary>
+            角色ID列表
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserViewModel.UsrPhoneNum">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserViewModel.UsrAccount">
+            <summary>
+            登录账号
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserViewModel.UsrPsw">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserViewModel.UsrType">
+            <summary>
+            默认1为部门账号，2为正式人员，3为试用人员，4为普通用户
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserViewModel.UsrName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserViewModel.UsrDeptId">
+            <summary>
+            所属部门ID
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserViewModel.RoleIdList">
+            <summary>
+            所属角色
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserViewModel.UsrState">
+            <summary>
+            用户数据状态，1为启用，0为停用
+            </summary>
+        </member>
+        <member name="P:HelpCenterJwt.ViewModel.UserViewModel.UsrVerifyState">
+            <summary>
+            用户审核状态，1为通过，0为未通过
+            </summary>
+        </member>
+    </members>
+</doc>

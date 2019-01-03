@@ -1,0 +1,65 @@
+
+SELECT
+    *
+FROM
+    (
+    SELECT
+        _docusrrole.usrid,
+        _docusrrole.usrName,
+        _docusrrole.usrDeptId,
+        _docusrrole.roleId,
+        _docusrrole.roleName,
+        _docusrrole.docId docUsrRoleDocId,
+        docdeptrole.docId docDeptRoleDocId,
+        docdeptrole.deptId
+    FROM
+
+        (
+        SELECT
+            _usrrole.*,
+            docusrrole.docId
+        FROM
+
+            (
+            SELECT
+                _urole.usrid,
+                _urole.usrName,
+                _urole.usrDeptId,
+                role.roleId,
+                role.roleName
+            FROM
+
+                (
+                SELECT
+                    _usr.usrid,
+                    _usr.usrName,
+                    _usr.usrDeptId,
+                    usrrole.roleId
+                FROM
+/*匹配用户ID，检查用户状态*/
+                    (SELECT usr.usrid, usr.usrName, usr.usrDeptId FROM usr WHERE usrId = '1' AND usr.usrState != 0 ) _usr
+                   LEFT JOIN usrrole ON _usr.usrId = usrrole.usrId
+                   AND usrrole.usrRoleState != 0 
+				) _urole /*关联用户的角色关系*/
+                LEFT JOIN role ON _urole.roleId = role.roleid /*检查用户对应的角色状态*/
+
+                AND role.roleState != 0 
+			) _usrrole /*关联角色和文档的关系*/
+            LEFT JOIN docusrrole ON _usrrole.roleid = docusrrole.roleId
+
+        ) _docusrrole
+        LEFT JOIN docdeptrole ON _docusrrole.usrDeptId = docdeptrole.deptId
+
+    ) _docrole /*除角色和文档关系外，文档所属部门的人员也可见*/
+    INNER JOIN helpdoc ON(
+        /*用户关联角色，角色关联文档*/
+        _docrole.docUsrRoleDocId = helpdoc.docId
+
+        OR /*文档关联分享部门*/
+        _docrole.docDeptRoleDocId = helpdoc.docId
+
+        OR /*文档本身归属部门*/
+        helpdoc.docDeptId = _docrole.usrDeptId
+    )
+
+    WHERE helpdoc.docState != 0
